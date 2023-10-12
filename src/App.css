@@ -64,6 +64,13 @@
   background: #fff;
   border: 2px solid #fff;
   padding: 12px 32px;
+  transition: 0.3s linear;
+}
+
+.button:hover {
+  background: var(--red);
+  border: 2px solid var(--red);
+  color: var(--white);
 }
 
 .fw_500 {
@@ -156,9 +163,9 @@ label[for="menu_box"] {
 
 .discover-button {
   border-radius: 10px;
-  border: 2px solid #f4241e;
+  border: 2px solid var(--red);
   padding: 12px 32px;
-  background-color: #f4241e;
+  background-color: var(--red);
   margin-bottom: 20px;
   margin-top: 40px;
   transition: 0.3s linear;
@@ -167,7 +174,7 @@ label[for="menu_box"] {
 .discover-button:hover {
   border: 2px solid #fff;
   background-color: #fff;
-  color: #f4241e;
+  color: var(--red);
 }
 
 .mt_20 {
