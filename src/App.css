@@ -1,38 +1,648 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none !important;
+  /* outline: 2px solid red; */
+}
+
+.bg-yellow {
+  background-color: var(--yellow-300);
+}
+
+.bg_red {
+  background-color: var(--red);
+}
+
+.max-width-922 {
+  max-width: 922px;
+}
+
+.max-width-1194 {
+  max-width: 1194px;
+}
+
+.ff_poppins {
+  font-family: "poppins", "sans-serif";
+}
+
+.fw_600 {
+  font-weight: 600;
+}
+
+.text_red {
+  color: #f4241e;
+}
+
+.text_black {
+  color: var(--black);
+}
+
+.text_white {
+  color: var(--white);
+}
+
+.text_black:hover {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.position-fixed {
+  position: fixed;
+  z-index: 2;
+}
+
+.pt_100 {
+  padding-top: 100px;
+}
+
+.button {
+  border-radius: 10px;
+  background: #fff;
+  border: 2px solid #fff;
+  padding: 12px 32px;
+}
+
+.fw_500 {
+  font-weight: 500;
+}
+
+.pt_11 {
+  padding-top: 11px;
+}
+
+input[type="checkbox"]:checked~ul.small_screen {
+  opacity: 1;
+  pointer-events: all;
+  left: 0;
+}
+
+label[for="menu_box"] {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 50;
+  position: relative;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.w_50 {
+  width: 50%;
+}
+
+.max-width-806 {
+  max-width: 806px;
+}
+
+.max-width-345 {
+  max-width: 345px;
+}
+
+.mb_27 {
+  margin-bottom: 27px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mw-524 {
+  max-width: 524px;
+}
+
+.mt_27 {
+  margin-top: 27px;
+}
+
+.mt_73 {
+  margin-top: 73px;
+}
+
+.transform-translateY {
+  transform: translateY(-30%);
+}
+
+.background-img {
+  /* background-image: url(../images/png/burgers-img.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg-light-yellow {
+  background-color: var(--light-yellow);
+}
+
+.mb_24 {
+  margin-bottom: 24px;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.Home:hover {
+  font-weight: 600 !important;
+}
+
+.discover-button {
+  border-radius: 10px;
+  border: 2px solid #f4241e;
+  padding: 12px 32px;
+  background-color: #f4241e;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  transition: 0.3s linear;
+}
+
+.discover-button:hover {
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #f4241e;
+}
+
+.mt_20 {
+  margin-top: 20px;
+}
+
+.mb_20 {
+  margin-bottom: 20px;
+}
+
+.py-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.background_yellow {
+  background-color: #f6e300;
+}
+
+.gap_38 {
+  gap: 38px;
+}
+
+.py_114 {
+  padding-top: 114px;
+  padding-bottom: 114px;
+}
+
+/* section-6 */
+.mt_29 {
+  margin-top: 29px;
+}
+
+.text_centre {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pb_58 {
+  padding-bottom: 58px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* <timeline> */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #f4241e;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* timelineContainer around content */
+.timelineContainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timelineContainer::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid white;
+  top: 0;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the timelineContainer to the left */
+.left {
+  left: 0;
+}
+
+/* Place the timelineContainer to the right */
+.right {
+  left: 50%;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 29px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Fix the circle for timelineContainers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/*</timeline> */
+.box {
+  /* width: 100vw; */
+  background: #f6e300;
+  position: relative;
+}
+
+.fw_700 {
+  font-weight: 700;
+}
+
+.fw_400 {
+  font-weight: 400 !important;
+}
+
+.pt_73 {
+  padding-top: 73px;
+}
+
+.mt_16 {
+  margin-top: 16px;
+}
+
+.mt_97 {
+  margin-top: 97px;
+}
+
+.pb_106 {
+  padding-bottom: 106px;
+}
+
+.ml_60 {
+  margin-left: 60px;
+}
+
+.top_10 {
+  top: 10%;
+}
+
+.top_7 {
+  top: 7%;
+}
+
+.top_30 {
+  top: 30%;
+}
+
+.right-30 {
+  right: 30%;
+}
+
+.top_65 {
+  top: 65%;
+}
+
+.left_1 {
+  left: 1%;
+}
+
+.top_50 {
+  top: 50%;
+}
+
+.top_25 {
+  top: 25%;
+}
+
+.mt-88 {
+  margin-top: 88px;
+}
+
+.left_25 {
+  left: 25%;
+}
+
+.top_43 {
+  top: 43%;
+}
+
+.left_6 {
+  left: 6%;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.top_70 {
+  top: 70%;
+}
+
+.top_48 {
+  top: 48%;
+}
+
+.right-3 {
+  right: 3%;
+}
+
+.top_5 {
+  top: 5%;
+}
+
+.left-17 {
+  left: 17%;
+}
+
+.right-26 {
+  right: 26%;
+}
+
+.top_55 {
+  top: 55%;
+}
+
+.right-17 {
+  right: 17%;
+}
+
+.top_11 {
+  top: 11%;
+}
+
+.bottom-28 {
+  bottom: 28%;
+}
+
+.left-6 {
+  left: 6%;
+}
+
+.left_23 {
+  left: 23%;
+}
+
+.left_20 {
+  left: 20%;
+}
+
+/* card section */
+.mr_20 {
+  margin-right: 20px;
+}
+
+.mt_42 {
+  margin-top: 42px;
+}
+
+.mb_38 {
+  margin-bottom: 38px;
+}
+
+.pb_68 {
+  padding-bottom: 68px;
+}
+
+.mt_58 {
+  margin-top: 58px;
+}
+
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
+.background-light-yellow {
+  background-color: var(--yellow-300);
+}
+
+.mb_10 {
+  margin-bottom: 10px;
+}
+
+.mr_46 {
+  margin-right: 46px;
+}
+
+.mb_52 {
+  margin-bottom: 52px;
+}
+
+/* <accordian> */
+.accordion-item {
+  background-color: var(--light-yellow) !important;
+}
+
+.text-white {
+  --bs-text-opacity: 1;
+}
+
+.accordion {
+  --bs-accordion-border-color: transparent !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--light-yellow);
+  color: #000000;
+  margin-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.accordion-item {
+  color: var(--bs-accordion-color);
+  background-color: var(--light-yellow);
+  border: none !important;
+}
+
+.accordion-button {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  font-size: 1rem;
+  color: #000000;
+  text-align: left;
+  background-color: var(--light-yellow);
+  border: none;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--bs-accordion-transition);
+  /* margin-bottom: 8px; */
+  font-size: 18px !important;
+  font-weight: 600 !important;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion-button:not(.collapsed) {
+  background-color: var(--light-yellow);
+  color: #000000;
+  box-shadow: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.accordion-button:focus {
+  border-color: unset;
+}
+
+.accordion-button:not(.collapsed) {
+  color: none;
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+}
+
+/* </accordian> */
+/* Media queries - Responsive timeline on screens less than 768px wide */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Full-width timelineContainers */
+  .timelineContainer {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timelineContainer::before {
+    left: 60px;
+    border: medium solid #fff03f;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff03f transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .small_screen {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #f6e300;
+    transition: all.3s linear;
+    z-index: 10;
+  }
+
+  label[for="menu_box"]>span {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #f4241e;
+  }
+}
+
+@media (min-width: 992px) {
+  .max-width-591 {
+    max-width: 591px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .col-md-4 {
+    width: 33.33% !important;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .col-md-6 {
+    width: 50%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+:root {
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-36: 36px;
+  --fs-48: 48px;
+  --yellow-300: #f6e300;
+  --black: #000000;
+  --white: #ffffff;
+  --light-yellow: #fff03f;
+  --red: #f4241e;
+}
+
+.fs_20 {
+  font-size: var(--fs-20);
+}
+
+.fs_18 {
+  font-size: var(--fs-18);
+}
+
+.fs_24 {
+  font-size: var(--fs-24);
+}
+
+.fs_36 {
+  font-size: var(--fs-36);
+}
+
+.fs_48 {
+  font-size: var(--fs-48);
+}
+
+@media (max-width:576px) {
+  :root {
+    --fs-18: 18px;
+    --fs-20: 20px;
+    --fs-24: 24px;
+    --fs-36: 36px;
+    --fs-48: 36px;
   }
 }
